@@ -1,10 +1,12 @@
+import Menu from "./components/Menu";
+import Home from "./pages/Home";
+
 function App() {
     return (
-        <div className="">
-            <header className="">
-                <h1>Hello world</h1>
-            </header>
-        </div>
+        <>
+            <Menu/>
+            <Home />
+        </>
     );
 }
 
