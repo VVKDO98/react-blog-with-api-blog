@@ -22,9 +22,9 @@ const Menu = () => {
                         <li><a href="/"><IoCreate className="text-lg hover:text-green" /></a></li>
                         <li><a href="/" className='font-medium text-sm hover:text-green'>Contact</a></li>
                         <li>
-                            <select name="langue">
-                                <option value="en">En</option>
-                                <option value="fr">Fr</option>
+                            <select name="langue" className='font-medium text-sm bg-lightgreen'>
+                                <option value="en" className='font-medium text-sm'>En</option>
+                                <option value="fr" className='font-medium text-sm'>Fr</option>
                             </select>
                         </li>
                     </ul>
