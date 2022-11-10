@@ -1,11 +1,12 @@
 import React from "react";
-import RecentPosts from "../components/RecentPosts";
+import Hero from "../components/Hero";
+import RecentlyPosted from "../components/RecentlyPosted";
 import useFetch from "../hooks/useFetch";
 
 
 const Home = () => {
     //const url_base = "https://api-blog-janh.onrender.com/";
-    const url_base = "http://localhost:3000/posts";
+    const url_base = "http://localhost:3030/";
     const { loading, error, data } = useFetch(url_base + "posts");
 
     if (loading) return <p>Loading of articles</p>;
@@ -14,12 +15,15 @@ const Home = () => {
     console.log(data);
 
     return (
-        <div id="homepage">
-            <h2>Recently Posted</h2>
-            <div id="recentActicles">
-                {data.map(data => <RecentPosts data={data}/>)}
+        <>
+            <Hero data={data}/>
+            <div id="homepage">
+                <h2>Recently Posted</h2>
+                <div id="recentActicles">
+                    {data.map(data => <RecentlyPosted data={data}/>)}
+                </div>
             </div>
-        </div>
+        </>
     );
 };
 
