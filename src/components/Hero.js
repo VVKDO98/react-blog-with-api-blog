@@ -1,10 +1,14 @@
 import React from 'react';
 import FeaturedThisMonth from './FeaturedThisMonth';
+import PopularPosted from './PopularPosted';
 
 const Header = ({data}) => {
     return (
         <div className='w-full h-full bg-bannercolor py-10'>
-            <FeaturedThisMonth data={data}/>
+            <div className='w-11/12 m-auto'>
+                <FeaturedThisMonth data={data}/>
+                <PopularPosted data={data}/>
+            </div>
         </div>
     );
 };
