@@ -1,4 +1,5 @@
 import React from 'react';
+import moment from 'moment/moment';
 
 const RecentPosts = ({data}) => {
     return (
@@ -8,7 +9,7 @@ const RecentPosts = ({data}) => {
             <h3>{data.title}</h3>
             <div>
                 <p>{data.user.name}</p>
-                <p>{data.created_at}</p>
+                <p>{moment(data.created_at).format('DD MMMM YYYY')}</p>
             </div>
             <p>{data.excerpt}</p>
         </div>
