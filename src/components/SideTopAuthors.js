@@ -12,18 +12,20 @@ const SideTopAuthors = () => {
     console.log(data);
 
     return (
-        <div>
+        <div className='mt-10'>
             <h3 className='font-semibold text-xl'><span className='py-0.5 px-2 text-white bg-green'>Top</span> Authors</h3>
             {data.map((data, index) => {
-                return  <div key={index}>
-                            <img src="/" alt=""/>
+                return  <div key={index} className='my-10 flex flex-row items-center gap-6'>
+                            <div className='h-20 w-20 rounded-full bg-grey'>
+                                <img src="/" alt=""/>
+                            </div>
                             <div>
-                                <p>{data.username}</p>
-                                <p>{data.title}</p>
-                                <div>
-                                    <a href="/"><FaFacebookF/></a>
-                                    <a href="/"><FaTwitter/></a>
-                                    <a href="/"><FaInstagram/></a>
+                                <p className='mb-1 text-lg font-semibold text-black'>{data.username}</p>
+                                <p className='mb-3 text-base font-light'>{data.title}</p>
+                                <div className='flex flex-row gap-3'>
+                                    <a href="/"><FaFacebookF className='text-lg p-1 outline outline-1 rounded text-grey hover:text-white hover:bg-green' /></a>
+                                    <a href="/"><FaTwitter className='text-lg p-1 outline outline-1 rounded text-grey hover:text-white hover:bg-green'/></a>
+                                    <a href="/"><FaInstagram className='text-lg p-1 outline outline-1 rounded text-grey hover:text-white hover:bg-green'/></a>
                                 </div>
                             </div>
                         </div>
