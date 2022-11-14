@@ -12,12 +12,12 @@ const SideTopAuthors = () => {
     console.log(data);
 
     return (
-        <div className='mt-10'>
+        <div className='mt-10 lg:mt-0'>
             <h3 className='font-semibold text-xl'><span className='py-0.5 px-2 text-white bg-green'>Top</span> Authors</h3>
             {data.map((data, index) => {
                 return  <div key={index} className='my-10 flex flex-row items-center gap-6'>
-                            <div className='h-20 w-20 rounded-full bg-grey'>
-                                <img src="/" alt=""/>
+                            <div className='h-20 w-20 rounded-full bg-green flex justify-center items-center overflow-hidden'>
+                                <img className='w-8/12 h-8/12' src="./assets/img/tortue.png" alt=""/>
                             </div>
                             <div>
                                 <p className='mb-1 text-lg font-semibold text-black'>{data.username}</p>
