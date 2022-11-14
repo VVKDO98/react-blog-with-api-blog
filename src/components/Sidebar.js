@@ -7,8 +7,8 @@ const Sidebar = () => {
     return (
         <div className='w-11/12 lg:w-2/6 lg:m-0'>
             <SideTopAuthors/>
-            <SideCategories/>
-            <SideTodaysUpdate/>
+            {/* <SideCategories/>
+            <SideTodaysUpdate/> */}
             {/* <SideAd/>*/}
         </div>
     );
