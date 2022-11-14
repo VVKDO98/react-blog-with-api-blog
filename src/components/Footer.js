@@ -51,7 +51,7 @@ const Footer = () => {
                 </div>
                 <div id="footer__bot">
                     <hr className='mb-6 border-grey border-opacity-20'/>
-                    <p className='text-center'><a href="https://www.figma.com/file/Dd1ly6RJrFDMrwjUAOCIPi/Notebook---Minimal-Blog-Template-(Free)-(Community)" target="_blank" rel='noreferrer'>Figma Design</a> | <a href="https://github.com/VVKDO98" target="_blank" rel='noreferrer'>@VVKDO98</a></p>
+                    <p className='text-center text-xs'><a href="https://www.figma.com/file/Dd1ly6RJrFDMrwjUAOCIPi/Notebook---Minimal-Blog-Template-(Free)-(Community)" target="_blank" rel='noreferrer'>Figma Design</a> | <a href="https://github.com/VVKDO98" target="_blank" rel='noreferrer'>@VVKDO98</a></p>
                 </div>
             </div>
         </footer>

@@ -1,11 +1,18 @@
-# react-blog-with-api-blog
+# React Blog With Api Blog
+
+![Last screenshot](./Screenshot.png)
 
 ## To do
 
 - [x] Menu
+- [x] Header
+- [x] Block Recently Posted
+- [x] Block Top Authors
+- [x] Footer
 - [ ] Loading animation while fetching
-- [ ] Header
-- [ ] Block Recently Posted
+- [ ] Block Categories
+- [ ] Block Today's Update
+- [ ] Switch from my api to supabase
 - [ ] ...
 
 ## Link
