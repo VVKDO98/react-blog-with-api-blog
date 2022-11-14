@@ -1,6 +1,6 @@
 import React from "react";
 import Hero from "../components/Hero";
-import RecentlyPosted from "../components/RecentlyPosted";
+import MainContent from "../components/MainContent";
 import useFetch from "../hooks/useFetch";
 
 
@@ -17,12 +17,7 @@ const Home = () => {
     return (
         <>
             <Hero data={data}/>
-            <div id="homepage">
-                <h2>Recently Posted</h2>
-                <div id="recentActicles">
-                    {data.map(data => <RecentlyPosted data={data}/>)}
-                </div>
-            </div>
+            <MainContent data={data}/>
         </>
     );
 };

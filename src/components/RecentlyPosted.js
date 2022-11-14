@@ -1,19 +1,13 @@
 import React from 'react';
-import moment from 'moment/moment';
+import RecentlyPostedArticle from './RecentlyPostedArticle';
 
-const RecentPosts = ({data}) => {
+const RecentlyPosts = ({data}) => {
     return (
-        <div id='recentArticle'>
-            <img src={"./assets/img/" + data.image_url} alt={"Banner of " + data.title} />
-            <p>{data.categories.name}</p>
-            <h3>{data.title}</h3>
-            <div>
-                <p>{data.user.name}</p>
-                <p>{moment(data.created_at).format('DD MMMM YYYY')}</p>
-            </div>
-            <p>{data.excerpt}</p>
+        <div>
+            <h2>Recently Posted</h2>
+            {data.map((data) => <RecentlyPostedArticle data={data}/>)}
         </div>
     );
 };
 
-export default RecentPosts;
+export default RecentlyPosts;
