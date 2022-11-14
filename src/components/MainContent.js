@@ -3,7 +3,7 @@ import RecentlyPosts from './RecentlyPosted';
 
 const MainContent = ({data}) => {
     return (
-        <div id="mainContent" className='mt-10'>
+        <div id="mainContent" className='m-auto mt-10 w-4/5'>
             <RecentlyPosts data={data}/>
          </div>
     );
