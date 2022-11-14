@@ -5,7 +5,7 @@ const RecentlyPosts = ({data}) => {
     return (
         <div>
             <h2>Recently Posted</h2>
-            {data.map((data) => <RecentlyPostedArticle data={data}/>)}
+            {data.map((data, index) => <RecentlyPostedArticle data={data} key={index}/>)}
         </div>
     );
 };
