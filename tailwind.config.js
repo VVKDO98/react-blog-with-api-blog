@@ -18,7 +18,8 @@ module.exports = {
       'bgcolor': '#E5E5E5',
       'bannercolor': '#F2F8F7',
       'grey': '#555555',
-      'bgnews': '#DFF1F0'
+      'bgnews': '#DFF1F0',
+      'hrcolor': '#D1E7E5',
     },
   },
   plugins: [],

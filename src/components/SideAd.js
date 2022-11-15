@@ -2,7 +2,7 @@ import React from 'react';
 
 const SideAd = () => {
     return (
-        <div className='mt-10 mx-auto px-5 bg-green flex flex-row justify-start items-center lg:w-2/3 lg:mx-0'>
+        <div className='mt-10 mx-auto px-5 bg-green flex flex-row justify-start items-center lg:mx-0'>
             <div className='text-white my-16'>
                 <p className='text-lg font-semibold mb-3'>Want to travel sikkim by car ?</p>
                 <p className='text-sm font-normal mb-6'>Did you come here for something in particular or just general Riker-bashing? And blowing into.</p>
