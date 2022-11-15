@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Hero from "../components/Hero";
-// import MainContent from "../components/MainContent";
+import MainContent from "../components/MainContent";
 import {supabase} from "../supabaseClient"
 
 
@@ -35,7 +35,7 @@ const Home = () => {
     return (
         <>
             <Hero data={posts}/>
-            {/* <MainContent data={data}/> */}
+            <MainContent data={posts}/>
         </>
     );
 };
