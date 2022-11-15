@@ -1,23 +1,28 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Hero from "../components/Hero";
 import MainContent from "../components/MainContent";
-import useFetch from "../hooks/useFetch";
+import {supabase} from "../supabaseClient"
 
 
 const Home = () => {
-    //const url_base = "https://api-blog-janh.onrender.com/";
-    const url_base = "http://localhost:3030/";
-    const { loading, error, data } = useFetch(url_base + "posts");
+    const [fetchError, setFetchError] = useState();
+    const [posts, setPosts] = useState();
 
-    if (loading) return <p>Loading of articles</p>;
-    if (error) return <p>Unable to load articles</p>;
+    
 
-    console.log(data);
+    useEffect(() => {
+        async function fetchPosts() {
+        const {data: posts} = await supabase.from('Posts').select('title');
+        setPosts(posts);
+        console.log(posts);
+    }
+    fetchPosts()
+    }, [])
 
     return (
         <>
-            <Hero data={data}/>
-            <MainContent data={data}/>
+            {/* <Hero data={data}/>
+            <MainContent data={data}/> */}
         </>
     );
 };
