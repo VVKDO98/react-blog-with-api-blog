@@ -5,24 +5,47 @@ import {supabase} from "../supabaseClient"
 
 
 const Home = () => {
-    const [fetchError, setFetchError] = useState();
     const [posts, setPosts] = useState();
 
-    
-
     useEffect(() => {
-        async function fetchPosts() {
-        const {data: posts} = await supabase.from('Posts').select('title');
-        setPosts(posts);
-        console.log(posts);
-    }
-    fetchPosts()
+        fetchPosts()
     }, [])
 
+    const fetchPosts = async () => {
+        try{
+        let { data, error, status } = await supabase
+            .from('Posts')
+            .select('*');
+
+        if (error && status !== 406) {
+            throw error
+        }
+
+        if(data){
+            setPosts(data)
+            console.log(data);
+        }
+    } catch (error){
+        alert(error.message)
+    }
+}
+
+    // useEffect(() => {
+    //     async function fetchPosts() {
+    //         let { data, error } = await supabase
+    //         .from('Posts')
+    //         .select('*');
+    //         setPosts(data);
+    //     }
+    //     fetchPosts()
+    // }, [])
+
+    // console.log(posts);
+    
     return (
         <>
-            {/* <Hero data={data}/>
-            <MainContent data={data}/> */}
+            {/* <Hero data={posts}/> */}
+            {/* <MainContent data={data}/> */}
         </>
     );
 };
