@@ -12,8 +12,8 @@ const SideCategories = () => {
     return (
         <div className='mt-10'>
             <h3 className='font-semibold text-xl mb-10'><span className='py-0.5 px-2 text-white bg-green'>Categories</span></h3>
-            {data.map((data) => {
-                return  <div className='mb-3'>
+            {data.map((data, index) => {
+                return  <div className='mb-3' key={index}>
                             <div className='mb-3 flex flex-row justify-between items-center'>
                                 <p className='text-base font-medium'>{data.name}</p>
                                 <p className='text-base font-medium'>{data.posts.length}</p>
