@@ -1,7 +1,7 @@
 import React from 'react';
 import SideTopAuthors from './SideTopAuthors';
-import SideCategories from './SideCategories';
-import SideTodaysUpdate from './SideTodaysUpdate';
+// import SideCategories from './SideCategories';
+// import SideTodaysUpdate from './SideTodaysUpdate';
 
 const Sidebar = () => {
     return (
