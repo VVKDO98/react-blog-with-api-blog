@@ -11,12 +11,12 @@ const SideCategories = () => {
     console.log(data);
     return (
         <div className='mt-10'>
-            <h3 className='font-semibold text-xl'><span className='py-0.5 px-2 text-white bg-green'>Categories</span></h3>
+            <h3 className='font-semibold text-xl mb-10'><span className='py-0.5 px-2 text-white bg-green'>Categories</span></h3>
             {data.map((data) => {
-                return  <div className='mt-10'>
+                return  <div className='mb-3'>
                             <div className='mb-3 flex flex-row justify-between items-center'>
                                 <p className='text-base font-medium'>{data.name}</p>
-                                <p className='text-base font-medium'>12</p>
+                                <p className='text-base font-medium'>{data.posts.length}</p>
                             </div>
                             <hr className='border border-dotted border-hrcolor'/>
                         </div>
