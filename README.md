@@ -9,7 +9,7 @@
 - [x] Block Recently Posted
 - [x] Side Top Authors
 - [x] Footer
-- [ ] Loading animation while fetching
+- [x] Loading animation while fetching
 - [x] Side Categories
 - [x] Side Today's Update
 - [x] Side Instagram
