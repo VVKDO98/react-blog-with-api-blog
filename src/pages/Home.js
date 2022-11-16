@@ -1,41 +1,19 @@
-import React, { useEffect, useState } from "react";
 import Hero from "../components/Hero";
 import MainContent from "../components/MainContent";
-import {supabase} from "../supabaseClient"
+import FetchPosts from "../hooks/FetchPosts";
 
 
 const Home = () => {
-    const [posts, setPosts] = useState(null);
-    const [loading, setLoading] = useState(true);
-
-    useEffect(()=> {
-        const fetchPosts = async () => {
-            setLoading(true);
-            const { data, error } = await supabase
-                .from('Posts')
-                .select('*, Categories(*), Users(*)')
-            
-            if(error){
-                setPosts(null);
-                setLoading(true)
-            };
-
-            if(data){
-                setPosts(data);
-                setLoading(false)
-            };
-        };
-        fetchPosts();
-    }, []);
-
+    const {loading, error, data} = FetchPosts();
+    if (error) return <p>Loading of articles</p>;
     if (loading) return <p>Loading of articles</p>;
     
-    console.log(posts);
+    console.log(data);
     
     return (
         <>
-            <Hero data={posts}/>
-            <MainContent data={posts}/>
+            <Hero data={data}/>
+            <MainContent data={data}/>
         </>
     );
 };
