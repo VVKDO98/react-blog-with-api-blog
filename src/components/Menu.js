@@ -1,5 +1,6 @@
 import React from 'react';
 import { IoSearch, IoCreate } from "react-icons/io5";
+import { Link } from 'react-router-dom';
 
 const Menu = () => {
     return (
@@ -18,12 +19,12 @@ const Menu = () => {
                                     <option value="healthcare" className='font-medium text-sm'>Healthcare</option>
                                 </select>
                             </li>
-                            <li><a href="/" className='font-medium text-sm hover:text-green'>About</a></li>
-                            <li><a href="/" className='font-medium text-sm hover:text-green'>Contact</a></li>
+                            <li><Link to='/about' className='font-medium text-sm hover:text-green'>About</Link></li>
+                            <li><Link to='/contact' className='font-medium text-sm hover:text-green'>Contact</Link></li>
                         </ul>
                     </div>
                     <div>
-                        <a href="/"><img src="./assets/img/logo.png" alt="Logo NoteBook" /></a>
+                        <Link to='/' ><img src="./assets/img/logo.png" alt="Logo NoteBook" /></Link>
                     </div>
                     <div className='hidden lg:block'>
                         <ul className='flex items-center lg:gap-4'>
