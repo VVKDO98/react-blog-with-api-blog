@@ -5,7 +5,7 @@ import { IoCalendarClear } from "react-icons/io5";
 const RecentlyPostedArticle = ({data}) => {
     return (
         <div id='recentArticle' className='mt-10 w-full flex flex-col lg:flex-row lg:items-center lg:gap-8'>
-            <div className='mt-2 w-full h-52 rounded-lg flex justify-center items-center overflow-hidden lg:h-44 lg:w-1/3'>
+            <div className='mt-2 w-full h-52 rounded-lg flex justify-center items-center overflow-hidden lg:h-44 lg:w-1/2'>
                 <img className='min-w-full min-h-full object-cover' src={"./assets/img/" + data.image_url} alt={"Banner of " + data.title} />
             </div>
             <div className='mt-4 lg:mt-0 lg:w-2/3'>
