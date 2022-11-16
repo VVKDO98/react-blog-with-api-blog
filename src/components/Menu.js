@@ -7,7 +7,7 @@ const Menu = () => {
             <nav className='w-full h-20 bg-lightgreen flex items-center'>
                 <div id='navContainer' className='w-11/12 lg:w-4/5 m-auto flex justify-between items-center'>
                     <div className='hidden lg:block'>
-                        <ul className='flex items-center gap-14'>
+                        <ul className='flex items-center lg:gap-4'>
                             <li><a href="/" className='font-medium text-sm hover:text-green'>Homepage</a></li>
                             <li><a href="/" className='font-medium text-sm hover:text-green'>About</a></li>
                             <li><a href="/" className='font-medium text-sm hover:text-green'>Categories</a></li>
@@ -18,7 +18,7 @@ const Menu = () => {
                         <a href="/"><img src="./assets/img/logo.png" alt="Logo NoteBook" /></a>
                     </div>
                     <div className='hidden lg:block'>
-                        <ul className='flex items-center gap-14'>
+                        <ul className='flex items-center lg:gap-4'>
                             <li><a href="/"><IoSearch className="text-lg hover:text-green" /></a></li>
                             <li><a href="/"><IoCreate className="text-lg hover:text-green" /></a></li>
                             <li><a href="/" className='font-medium text-sm hover:text-green'>Contact</a></li>
