@@ -20,6 +20,8 @@ module.exports = {
       'grey': '#555555',
       'bgnews': '#DFF1F0',
       'hrcolor': '#D1E7E5',
+      'insta': '#D9D9D9',
+      'instaDark': '#B3B3B3'
     },
   },
   plugins: [],

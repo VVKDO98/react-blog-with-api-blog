@@ -3,6 +3,7 @@ import SideTopAuthors from './SideTopAuthors';
 import SideCategories from './SideCategories';
 import SideTodaysUpdate from './SideTodaysUpdate';
 import SideAd from './SideAd';
+import SideInstagram from './SideInstagram';
 
 const Sidebar = () => {
     return (
@@ -11,6 +12,7 @@ const Sidebar = () => {
             <SideAd/>
             <SideCategories/>
             <SideTodaysUpdate/>
+            <SideInstagram/>
         </div>
     );
 };
