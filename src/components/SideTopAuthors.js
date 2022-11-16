@@ -1,11 +1,9 @@
 import React from 'react';
-import useFetch from "../hooks/useFetch";
 import {FaFacebookF, FaInstagram, FaTwitter} from "react-icons/fa";
+import FetchUsers from '../hooks/FetchUsers';
 
 const SideTopAuthors = () => {
-    const url_base = "http://localhost:3030/";
-    const { loading, error, data } = useFetch(url_base + "users");
-
+    const {loading, error, data} = FetchUsers();
     if (loading) return <p>Loading Top Authors</p>;
     if (error) return <p>Unable to Top Authors</p>;
 
