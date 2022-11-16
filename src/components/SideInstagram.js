@@ -5,7 +5,7 @@ const SideInstagram = () => {
     return (
         <div className='mt-10'>
             <h3 className='font-semibold text-xl'><span className='py-0.5 px-2 text-white bg-green'>Instagram</span> Posts</h3>
-            <div className='mt-10 flex flex-row flex-wrap gap-2'>
+            <div className='mt-10 flex flex-row flex-wrap gap-1 lg:gap-2'>
                 <div className='w-[32%] aspect-square bg-insta rounded-lg'></div>
                 <div className='w-[32%] aspect-square bg-insta rounded-lg'></div>
                 <div className='w-[32%] aspect-square bg-insta rounded-lg'></div>
