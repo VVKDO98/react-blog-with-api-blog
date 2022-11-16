@@ -7,7 +7,7 @@ const FeaturedArticle = ({data}) => {
         <div className='mt-10 w-full lg:w-1/2'>
             <a href="/" className='text-xs text-white bg-green rounded px-2 py-0.5'>{data.Categories.name}</a>
             <h1 className='mt-2 text-xl font-semibold leading-7'>{data.title}</h1>
-            <div className='mt-2 w-full h-52 rounded-lg flex justify-center items-center overflow-hidden lg:h-44'>
+            <div className='mt-2 w-full h-52 rounded-lg flex justify-center items-center overflow-hidden lg:h-44 xl:h-52'>
                 <img className='min-w-full min-h-full object-cover' src={"./assets/img/" + data.image_url} alt={data.tite} />
             </div>
             <div className='mt-4 flex flex-row items-center gap-3 text-base font-normal text-grey'>
