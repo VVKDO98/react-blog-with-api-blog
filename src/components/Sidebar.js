@@ -11,7 +11,6 @@ const Sidebar = () => {
             <SideAd/>
             <SideCategories/>
             <SideTodaysUpdate/>
-            
         </div>
     );
 };
