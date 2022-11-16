@@ -1,10 +1,8 @@
 import React from 'react';
-import useFetch from '../hooks/useFetch';
+import FetchCategories from '../hooks/FetchCategories';
 
 const SideCategories = () => {
-    const url_base = "http://localhost:3030/";
-    const { loading, error, data } = useFetch(url_base + "categories");
-
+    const {loading, error, data} = FetchCategories();
     if (loading) return <p>Loading Top Authors</p>;
     if (error) return <p>Unable to Top Authors</p>;
 
@@ -16,7 +14,7 @@ const SideCategories = () => {
                 return  <div className='mb-3' key={index}>
                             <div className='mb-3 flex flex-row justify-between items-center'>
                                 <p className='text-base font-medium'>{data.name}</p>
-                                <p className='text-base font-medium'>{data.posts.length}</p>
+                                <p className='text-base font-medium'>{data.Posts.length}</p>
                             </div>
                             <hr className='border border-dotted border-hrcolor'/>
                         </div>
