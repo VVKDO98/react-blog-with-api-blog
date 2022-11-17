@@ -12,7 +12,7 @@ const FetchUsers = () => {
 
             const { data, error } = await supabase
                 .from('Users')
-                .select('*')
+                .select('id, name, username, title, email, Posts(*)')
             
             if(error){
                 setData(null);
