@@ -3,10 +3,10 @@ import { FaFacebookF, FaTwitter, FaPinterest, FaInstagram } from 'react-icons/fa
 
 const Contact = () => {
     return (
-        <div className='py-10 w-full'>
+        <div className='py-10 w-full lg:py-28'>
             <div className='w-4/5 mx-auto flex flex-col items-center justify-start'>
                 <h1 className='font-semibold text-xl'><span className='py-0.5 px-2 text-white bg-green'>Contact</span> Us</h1>
-                <div className='mt-10 w-full lg:flex lg:flex-row lg:items-start lg:gap-20'>
+                <div className='mt-10 w-full lg:mt-20 lg:flex lg:flex-row lg:items-start lg:gap-20'>
                     <div className='w-full lg:w-1/2'>
                         <form action="" className='flex flex-col gap-6'>
                             <div className='flex flex-col items-start gap-6 lg:flex-row'>
