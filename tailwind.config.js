@@ -21,8 +21,11 @@ module.exports = {
       'bgnews': '#DFF1F0',
       'hrcolor': '#D1E7E5',
       'insta': '#D9D9D9',
-      'instaDark': '#B3B3B3'
+      'instaDark': '#B3B3B3',
+      'form': '#94D7D3'
     },
   },
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/forms'),
+  ],
 }
