@@ -1,5 +1,6 @@
 import { useParams } from 'react-router-dom';
 import FetchCategoryByID from '../hooks/FetchCategoryByID'
+import CategorySearchResult from './CategorySearchResult';
 
 const Category = () => {
     const {id} = useParams();
@@ -11,8 +12,11 @@ const Category = () => {
     console.log(data[0].Posts);
     return (
         <div>
-            <h1>Category {id}</h1>
-            {data[0].Posts.map((post, index) => <h1 key={index}>{post.title}</h1>)}
+            <h1>Search result for {data[0].name}</h1>
+            <hr />
+            <div>
+                {data[0].Posts.map((post) => <CategorySearchResult key={post.id} data={post}/>)}
+            </div>
         </div>
     );
 };
