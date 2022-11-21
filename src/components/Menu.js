@@ -16,7 +16,7 @@ const Menu = () => {
                         </ul>
                     </div>
                     <div>
-                        <Link to='/' ><img src="./assets/img/logo.png" alt="Logo NoteBook" /></Link>
+                        <Link to='/' ><img src="/assets/img/logo.png" alt="Logo NoteBook" /></Link>
                     </div>
                     <div className='hidden lg:block'>
                         <ul className='flex items-center lg:gap-4'>

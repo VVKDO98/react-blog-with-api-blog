@@ -12,7 +12,7 @@ const FetchCategories = (id) => {
 
             const { data, error } = await supabase
                 .from('Categories')
-                .select('*, Posts(*)')
+                .select('*, Posts(*, Categories(*), Users(*))')
                 .eq('id', id)
             
             if(error){
