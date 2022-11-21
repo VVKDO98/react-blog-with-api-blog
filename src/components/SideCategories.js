@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import FetchCategories from '../hooks/FetchCategories';
 
 const SideCategories = () => {
@@ -13,7 +14,7 @@ const SideCategories = () => {
             {data.map((data, index) => {
                 return  <div className='mb-3' key={index}>
                             <div className='mb-3 flex flex-row justify-between items-center'>
-                                <p className='text-base font-medium'>{data.name}</p>
+                                <Link to={"/categories/" + data.id} className='text-base font-medium'>{data.name}</Link>
                                 <p className='text-base font-medium'>{data.Posts.length}</p>
                             </div>
                             <hr className='border border-dotted border-hrcolor'/>

@@ -1,6 +1,7 @@
 import React from 'react';
 import { IoCalendarClear } from "react-icons/io5";
 import moment from 'moment/moment';
+import { Link } from 'react-router-dom';
 
 const CategorySearchResult = ({data}) => {
     return (
@@ -9,7 +10,7 @@ const CategorySearchResult = ({data}) => {
                 <img className='min-w-full min-h-full object-cover' src={"/assets/img/" + data.image_url} alt={"Banner of " + data.alt} />
             </div>
             <div className='mt-4 lg:mt-0 lg:w-2/3'>
-                <a href='/' className='text-xs text-white bg-green rounded px-2 py-0.5'>{data.Categories.name}</a>
+                <Link to={"/categories/" + data.Categories.id} className='text-xs text-white bg-green rounded px-2 py-0.5'>{data.Categories.name}</Link>
                 <h1 className='mt-2 text-xl font-semibold leading-7'>{data.title}</h1>
                 <div className='mt-2 flex flex-row items-center gap-3 text-base font-normal text-grey'>
                     <span>{data.Users.name}</span>
