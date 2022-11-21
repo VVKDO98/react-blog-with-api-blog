@@ -29,7 +29,7 @@ const FetchCategories = (id) => {
         };
 
         fetchCategories();
-    }, []);
+    }, [id]);
 
     return {loading, error, data};
 };
