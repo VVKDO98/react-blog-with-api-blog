@@ -2,6 +2,7 @@ import React from 'react';
 import { IoSearch, IoCreate } from "react-icons/io5";
 import { Link } from 'react-router-dom';
 import DropdownCategories from './DropdownCategories';
+import DropdownLanguages from './DropdownLanguages';
 
 const Menu = () => {
     return (
@@ -22,12 +23,7 @@ const Menu = () => {
                         <ul className='flex items-center lg:gap-4'>
                             <li><a href="/"><IoSearch className="text-lg hover:text-green" /></a></li>
                             <li><a href="/"><IoCreate className="text-lg hover:text-green" /></a></li>
-                            <li>
-                                <select name="langue" className='font-medium text-sm bg-lightgreen'>
-                                    <option value="en" className='font-medium text-sm'>En</option>
-                                    <option value="fr" className='font-medium text-sm'>Fr</option>
-                                </select>
-                            </li>
+                            <li><DropdownLanguages/></li>
                         </ul>
                     </div>
                 </div>
