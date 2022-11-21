@@ -7,7 +7,7 @@ const Footer = () => {
             <div id="footer__content" className='w-4/5 mx-auto py-12 text-base font-normal text-grey lg:pt-28 lg:pb-7'>
                 <div id='footer__top' className='mb-10  lg:flex lg:flex-row lg:justify-between lg:gap-28'>
                     <div id='footer__header' className='mb-6 lg:w-1/5'>
-                        <img className='mb-6' src="./assets/img/logo.png" alt="logo"/>
+                        <img className='mb-6' src="/assets/img/logo.png" alt="logo"/>
                         <p>Did you come here for something in particular or just general Riker</p>
                     </div>
                     <div id='blog__list' className='mb-6 lg:w-1/5'>
