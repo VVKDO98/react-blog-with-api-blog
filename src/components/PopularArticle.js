@@ -7,9 +7,9 @@ const PopularArticle = ({data}) => {
     return (
         <div className='mt-10 w-full'>
             <Link to={"/categories/" + data.Categories.id} className='text-xs text-white bg-green rounded px-2 py-0.5'>{data.Categories.name}</Link>
-            <h1 className='mt-2 text-xl font-semibold leading-7'><Link to={`article/` + data.id}>{data.title}</Link></h1>
+            <h1 className='mt-2 text-xl font-semibold leading-7'><Link to={"/categories/" + data.Categories.id + "/" + data.id}>{data.title}</Link></h1>
             <div className='mt-2 w-full h-52 rounded-lg flex justify-center items-center overflow-hidden lg:hidden'>
-                <Link to={`article/` + data.id}>
+                <Link to={"/categories/" + data.Categories.id + "/" + data.id}>
                     <img src={"./assets/img/" + data.image_url} alt={data.alt} />
                 </Link>
             </div>

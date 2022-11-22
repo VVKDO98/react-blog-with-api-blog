@@ -8,7 +8,6 @@ import Footer from "./components/Footer";
 import {Routes, Route} from 'react-router-dom';
 import Error404 from "./components/Error404";
 import ReadArticle from "./components/ReadArticle";
-import Auth from "./pages/Auth";
 
 function App() {
     return (
@@ -16,12 +15,12 @@ function App() {
             <Menu/>
             <Routes>
                 <Route path="/" element={<Home/>} />
-                <Route path="/login" element={<Auth/>} />
                 <Route path="/about" element={<About/>} />
                 <Route path="/contact" element={<Contact/>} />
-                <Route path="/categories" element={<Categories/>} />
+                <Route path="/categories" element={<Categories/>}/>
                 <Route path="/categories/:id" element={<Category/>}/>
-                <Route path="/article/:id" element={<ReadArticle/>}/>
+                <Route path="/categories/:id/:id" element={<ReadArticle/>}/>
+                {/* <Route path="/article/:id" element={<ReadArticle/>}/> */}
                 <Route path="/*" element={<Error404/>}/>
             </Routes>
             <Footer/>
