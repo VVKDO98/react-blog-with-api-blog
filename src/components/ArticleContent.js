@@ -2,6 +2,7 @@ import React from 'react';
 import { IoCalendarClear } from "react-icons/io5";
 import moment from 'moment/moment';
 import { Link } from 'react-router-dom';
+import ArticleSocial from './ArticleSocial';
 
 const ArticleContent = ({data}) => {
     const post = data[0];
@@ -21,6 +22,7 @@ const ArticleContent = ({data}) => {
                 <img className='min-w-full min-h-full object-cover' src={`/assets/img/` + post.image_url} alt={post.image_url} />
             </div>
             <p className='text-base text-grey text-justify font-normal'>{post.body}</p>
+            <ArticleSocial/>
         </div>
     );
 };
