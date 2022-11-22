@@ -15,7 +15,7 @@ const SideTopAuthors = () => {
             {data.map((data, index) => {
                 return  <div key={index} className='my-10 flex flex-row items-center gap-6'>
                             <div className='h-20 w-20 rounded-full bg-green flex justify-center items-center overflow-hidden'>
-                                <img className='w-8/12 h-8/12' src="./assets/img/tortue.png" alt={data.title}/>
+                                <img className='w-8/12 h-8/12' src="/assets/img/tortue.png" alt={data.title}/>
                             </div>
                             <div>
                                 <p className='mb-1 text-lg font-semibold text-black'>{data.username}</p>
