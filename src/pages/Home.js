@@ -1,6 +1,7 @@
 import Hero from "../components/Hero";
 import MainContent from "../components/MainContent";
 import FetchPosts from "../hooks/FetchPosts";
+import { Helmet } from "react-helmet";
 
 
 const Home = () => {
@@ -12,6 +13,10 @@ const Home = () => {
     
     return (
         <>
+            <Helmet>
+                <title>Home | Notebook</title>
+                <meta name="description" content="App Description" />
+            </Helmet>
             <Hero data={data}/>
             <MainContent data={data}/>
         </>
