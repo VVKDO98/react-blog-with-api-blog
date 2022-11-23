@@ -1,10 +1,12 @@
 import React from 'react';
 import { Helmet } from "react-helmet";
 import { FaFacebookF, FaTwitter, FaPinterest, FaInstagram } from 'react-icons/fa';
+import Layout from '../components/Layout';
 
 const Contact = () => {
     return (
         <>
+        <Layout>
             <Helmet>
                 <title>Contact | Notebook</title>
                 <meta name="description" content="App Description" />
@@ -46,6 +48,7 @@ const Contact = () => {
                     </div>
                 </div>
             </div>
+        </Layout>
         </>
     );
 };

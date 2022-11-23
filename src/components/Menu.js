@@ -24,6 +24,7 @@ const Menu = () => {
                             <li><a href="/"><IoSearch className="text-lg hover:text-green" /></a></li>
                             <li><a href="/"><IoCreate className="text-lg hover:text-green" /></a></li>
                             <li><DropdownLanguages/></li>
+                            <li><Link to='/dashboard' className='font-medium text-sm hover:text-green'>Dashboard</Link></li>
                         </ul>
                     </div>
                 </div>
