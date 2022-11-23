@@ -1,10 +1,10 @@
 import React from 'react';
 
-const Dashboard = ({session}) => {
+const Dashboard = () => {
 
     return (
         <div>
-            <h1>dash</h1>
+            <h1>Dashboard</h1>
         </div>
     );
 };

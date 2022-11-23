@@ -18,7 +18,7 @@ export default function Auth() {
         } else{
             setMessage("Login link has been sent.")
         }
-        
+        setEmail("")
     }
 
     return (
