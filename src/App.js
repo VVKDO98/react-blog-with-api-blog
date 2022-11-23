@@ -1,5 +1,6 @@
 import Menu from "./components/Menu";
 import Home from "./pages/Home";
+import Auth from "./pages/Auth"
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Categories from "./pages/Categories";
@@ -15,6 +16,7 @@ function App() {
             <Menu/>
             <Routes>
                 <Route path="/" element={<Home/>} />
+                <Route path="/login" element={<Auth/>}/>
                 <Route path="/about" element={<About/>} />
                 <Route path="/contact" element={<Contact/>} />
                 <Route path="/categories" element={<Categories/>}/>
