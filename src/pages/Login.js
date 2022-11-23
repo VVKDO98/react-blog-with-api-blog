@@ -1,5 +1,6 @@
 import React from 'react';
 import { useState } from 'react'
+import Layout from '../components/Layout';
 import { useAuth } from '../hooks/authProvider';
 
 export default function Auth() {
@@ -22,11 +23,13 @@ export default function Auth() {
     }
 
     return (
-        <div className='py-10 w-4/5 h-[600px] mx-auto flex flex-col justify-center items-center'>
-            <h1 className='mb-5 text-3xl font-semibold'>Login</h1>
-            {message && message}
-            <input className='mb-5 w-full h-10 bg-bannercolor rounded text-center text-grey lg:w-1/2' type="email" placeholder='Email' onChange={(e) => setEmail(e.target.value)}/>
-            <button className='w-full h-10 bg-green rounded text-center text-white font-semibold lg:w-1/2' onClick={signInWithEmail}>Login</button>
-        </div>
+        <Layout>
+            <div className='py-10 w-4/5 h-[600px] mx-auto flex flex-col justify-center items-center'>
+                <h1 className='mb-5 text-3xl font-semibold'>Login</h1>
+                {message && message}
+                <input className='mb-5 w-full h-10 bg-bannercolor rounded text-center text-grey lg:w-1/2' type="email" placeholder='Email' onChange={(e) => setEmail(e.target.value)}/>
+                <button className='w-full h-10 bg-green rounded text-center text-white font-semibold lg:w-1/2' onClick={signInWithEmail}>Login</button>
+            </div>
+        </Layout>
     )
 }

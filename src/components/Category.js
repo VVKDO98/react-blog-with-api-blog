@@ -1,6 +1,7 @@
 import { useParams } from 'react-router-dom';
 import FetchCategoryByID from '../hooks/FetchCategoryByID'
 import CategorySearchResult from './CategorySearchResult';
+import Layout from './Layout';
 
 const Category = () => {
     const {id} = useParams();
@@ -12,11 +13,13 @@ const Category = () => {
     console.log(data[0].Posts);
     return (
         <>
+        <Layout>
             <div className='w-11/12 m-auto mt-10 lg:w-4/5'>
                 <h1 className='text-lg text-grey'>Search result for <span className='text-black font-semibold'>{data[0].name}</span></h1>
                 <hr className='border border-1 border-bgcolor'/>
                 {data[0].Posts.map((post) => <CategorySearchResult key={post.id} data={post}/>)}
             </div>
+        </Layout>
         </>
     );
 };

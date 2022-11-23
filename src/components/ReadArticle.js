@@ -3,6 +3,7 @@ import Sidebar from './Sidebar'
 import ArticleContent from './ArticleContent';
 import { useParams } from 'react-router-dom';
 import FetchArticleByID from '../hooks/FetchArticleByID'
+import Layout from './Layout';
 
 const ReadArticle = () => {
     const {id} = useParams();
@@ -15,10 +16,12 @@ const ReadArticle = () => {
 
     return (
         <>
+        <Layout>
             <div className='m-auto my-10 w-4/5 lg:flex lg:flex-row lg:justify-between lg:gap-40'>
                 <ArticleContent data={data}/>
                 <Sidebar/>
             </div>   
+        </Layout>
         </>
     );
 };
