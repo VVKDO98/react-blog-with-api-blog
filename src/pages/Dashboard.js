@@ -1,5 +1,6 @@
 import React from 'react';
 import { useState } from 'react';
+import Layout from '../components/Layout';
 import { supabase } from '../supabaseClient';
 
 const Dashboard = () => {
@@ -23,17 +24,19 @@ const Dashboard = () => {
     }
 
     return (
-        <div>
-            <h1>Dashboard</h1>
-            <input className='bg-green mb-1' type="text" onChange={(e) => setTitle(e.target.value)}/><br />
-            <input className='bg-green mb-1' type="text" onChange={(e) => setExcerpt(e.target.value)}/><br />
-            <input className='bg-green mb-1' type="text" onChange={(e) => setBody(e.target.value)}/><br />
-            <input className='bg-green mb-1' type="text" onChange={(e) => setImage_url(e.target.value)}/><br />
-            <input className='bg-green mb-1' type="number" onChange={(e) => setCategory_id(e.target.value)}/><br />
-            <input className='bg-green mb-1' type="number" onChange={(e) => setUser_id(e.target.value)}/><br />
-            <input className='bg-green mb-1' type="text" onChange={(e) => setAlt(e.target.value)}/>
-            <button className='w-full h-10 bg-green rounded text-center text-white font-semibold lg:w-1/2' onClick={insertPost}>Login</button>
-        </div>
+        <Layout>
+            <div className='py-10 w-4/5 mx-auto flex flex-col justify-center items-center'>
+                <h1 className='mb-5 text-3xl font-semibold'>Add a new post</h1>
+                <input className='w-full h-10 bg-bannercolor rounded text-center text-grey lg:w-1/2' type="text" placeholder='Title' onChange={(e) => setTitle(e.target.value)}/><br />
+                <input className='w-full h-10 bg-bannercolor rounded text-center text-grey lg:w-1/2' type="text" placeholder='Excerpt' onChange={(e) => setExcerpt(e.target.value)}/><br />
+                <textarea className='w-full h-40 bg-bannercolor rounded text-center text-grey resize-none lg:w-1/2' type="text" placeholder='Body' onChange={(e) => setBody(e.target.value)}/><br />
+                <input className='w-full h-10 bg-bannercolor rounded text-center text-grey lg:w-1/2' type="text" placeholder='image.jpg' onChange={(e) => setImage_url(e.target.value)}/><br />
+                <input className='w-full h-10 bg-bannercolor rounded text-center text-grey lg:w-1/2' type="number" placeholder='Category ID' onChange={(e) => setCategory_id(e.target.value)}/><br />
+                <input className='w-full h-10 bg-bannercolor rounded text-center text-grey lg:w-1/2' type="number" placeholder='User ID' onChange={(e) => setUser_id(e.target.value)}/><br />
+                <input className='w-full h-10 bg-bannercolor rounded text-center text-grey lg:w-1/2' type="text" placeholder='Alt' onChange={(e) => setAlt(e.target.value)}/>
+                <button className='mt-5 w-full h-10 bg-green rounded text-center text-white font-semibold lg:w-1/2' onClick={insertPost}>Submit</button>
+            </div>
+        </Layout>
     );
 };
 
