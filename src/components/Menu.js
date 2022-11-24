@@ -22,7 +22,7 @@ const Menu = () => {
                     <div className='hidden lg:block'>
                         <ul className='flex items-center lg:gap-4'>
                             <li><a href="/"><IoSearch className="text-lg hover:text-green" /></a></li>
-                            <li><a href="/"><IoCreate className="text-lg hover:text-green" /></a></li>
+                            <li><Link to="/dashboard" href="/"><IoCreate className="text-lg hover:text-green" /></Link></li>
                             <li><DropdownLanguages/></li>
                         </ul>
                     </div>

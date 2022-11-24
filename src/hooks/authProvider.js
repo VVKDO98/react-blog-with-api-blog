@@ -36,6 +36,7 @@ function useProviderAuth() {
     }
 
     useEffect(() => {
+        
         const user = supabase.auth.user
         setUser(user)
 
