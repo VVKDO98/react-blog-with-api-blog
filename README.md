@@ -20,9 +20,9 @@ This blog project is about experimenting with ReactJS development. After a backe
 - [x] Footer links
 - [x] Category menu
 - [x] 404 page
-- [ ] Article page
-- [ ] Login ?
-- [ ] ...
+- [x] Article page
+- [x] Login page
+- [ ] Dashboard
 
 ## Tools
 
@@ -34,6 +34,6 @@ This blog project is about experimenting with ReactJS development. After a backe
 
 ## Links
 
-[Hosted Project](https://react-blog-with-api-blog.vercel.app)
+[Hosted Project](https://blog-notebook.vercel.app/)
 
 [Figma Design](https://www.figma.com/file/Dd1ly6RJrFDMrwjUAOCIPi/Notebook---Minimal-Blog-Template-(Free)-(Community))
