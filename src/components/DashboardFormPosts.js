@@ -13,17 +13,10 @@ const DashboardFormPosts = () => {
 
     const insertPost = async (e) => {
         e.preventDefault();
+        console.log(category_id);
         const { error } = await supabase
         .from('Posts')
-        .insert([{ title: title, excerpt: excerpt, body: body, image_url: image_url, category_id: category_id, user_id: user_id, alt: alt }]);
-
-        setTitle("");
-        setExcerpt("");
-        setBody("");
-        setImage_url("");
-        setCategory_id("");
-        setUser_id("");
-        setAlt("");
+        .insert([{ title: title, excerpt: excerpt, body: body, image_url: image_url, category_id: parseInt(category_id), user_id: parseInt(user_id), alt: alt }]);
 
         if(error){
             console.log(error.message);
@@ -50,6 +43,7 @@ const DashboardFormPosts = () => {
                         <option value="5">Healthcare</option>
                     </select>
                     <select className='w-1/2 h-10 px-5 mb-4 rounded-sm bg-bgdash' onChange={(e) => setUser_id(e.target.value)}>
+                        <option value="">-- Choose a User --</option>
                         <option value="1">VVKDO</option>
                     </select>
                     {/* <input className='w-1/2 h-10 px-5 mb-4 rounded-sm bg-bgdash' type="number" placeholder='Category ID' onChange={(e) => setCategory_id(e.target.value)}/><br />

@@ -22,7 +22,7 @@ root.render(
             <Routes>
                 <Route index element={<Home/>} />
                 <Route path={"dashboard2"} element={<DashboardPosts/>}/>
-                <Route path={"dashboard"} element={<ProtectedRoute><Dashboard/></ProtectedRoute>}/>
+                <Route path={"dashboard"} element={<ProtectedRoute><DashboardPosts/></ProtectedRoute>}/>
                 <Route path="/login" element={<Login/>}/>
                 <Route path="/dashboard" element={<Dashboard/>}/>
                 <Route path="/about" element={<About/>} />
