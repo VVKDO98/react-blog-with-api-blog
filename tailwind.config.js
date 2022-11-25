@@ -23,7 +23,9 @@ module.exports = {
       'hrcolor': '#D1E7E5',
       'insta': '#D9D9D9',
       'instaDark': '#B3B3B3',
-      'form': '#94D7D3'
+      'form': '#94D7D3',
+      'bgdash': '#F1F1F1',
+      'blue': '#3071F2'
     },
   },
   plugins: [

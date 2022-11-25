@@ -13,7 +13,7 @@ import Category from "./components/Category";
 import Error404 from "./components/Error404";
 import ReadArticle from "./components/ReadArticle";
 import Dashboard from "./pages/Dashboard";
-import DashboardCopy from "./pages/DashboardCopy";
+import DashboardPosts from "./pages/DashboardPosts";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -21,7 +21,7 @@ root.render(
         <BrowserRouter>
             <Routes>
                 <Route index element={<Home/>} />
-                <Route path={"dashboard2"} element={<DashboardCopy/>}/>
+                <Route path={"dashboard2"} element={<DashboardPosts/>}/>
                 <Route path={"dashboard"} element={<ProtectedRoute><Dashboard/></ProtectedRoute>}/>
                 <Route path="/login" element={<Login/>}/>
                 <Route path="/dashboard" element={<Dashboard/>}/>
